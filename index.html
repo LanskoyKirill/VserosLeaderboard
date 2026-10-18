@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d19">
+  <meta name="description" content="Независимый рейтинг основного этапа Всероссийской олимпиады по искусственному интеллекту 2026: первый и второй тур, общий топ-300.">
+  <title>Орбита 2026 — общий рейтинг олимпиады по ИИ</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/data.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <div class="sky-layer" aria-hidden="true"></div>
+  <header class="site-head content">
+    <a class="brand" href="./" aria-label="Орбита — главная"><span class="brand-icon">✳</span><span>орбита<span class="brand-dot">.</span><small>AI OLYMPIAD '26</small></span></a>
+    <span class="head-meta"><span class="glowing-dot"></span> Независимый рейтинг · 18.10.2026</span>
+    <a class="github-pill" href="https://github.com/new" target="_blank" rel="noopener noreferrer"><span>↗</span> GitHub Pages</a>
+  </header>
+  <main class="content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="tagline-line"></span> ВСЕРОССИЙСКАЯ ОЛИМПИАДА ПО ИИ <span class="tiny-label">2026</span></div>
+        <h1 id="hero-title">Путь к <em>вершине.</em><br>В цифрах.</h1>
+        <p class="hero-description">Общий лидерборд основного этапа: private-результаты двух туров All Cups, сведённые по логинам. Рейтинг является независимым расчётом, а не официальным протоколом жюри.</p>
+        <div class="hero-actions"><a href="#leaderboard" class="primary-action">Смотреть рейтинг <span>↘</span></a><a href="data/top_300.csv" download="top_300_ai_2026.csv" class="secondary-action">↓ Скачать топ-300 CSV</a></div>
+      </div>
+      <div class="orbit-art" aria-hidden="true"><div class="orbit orbit-out"><div class="satellite satellite-a"></div></div><div class="orbit orbit-mid"><div class="satellite satellite-b"></div></div><div class="orbit orbit-in"></div><div class="planet"><span>AI</span><i>2026</i></div><div class="star-a">✦</div><div class="star-b">✧</div><div class="orbit-note orbit-note-one">ДАННЫЕ / PRIVATE</div><div class="orbit-note orbit-note-two">ОСНОВНОЙ ЭТАП</div></div>
+    </section>
+    <section class="stat-grid" aria-label="Статистика рейтинга">
+      <article class="stat"><div class="stat-label">ВСЕГО БАЛЛОВ <span class="stat-glyph">↗</span></div><div class="stat-number">1 500<span> max</span></div><p>900 в первом туре · 600 во втором</p></article>
+      <article class="stat"><div class="stat-label">УЧАСТНИКИ <span class="stat-glyph">◎</span></div><div class="stat-number">759<span> аккаунтов</span></div><p>В сохранённом рейтинге 1-го тура</p></article>
+      <article class="stat"><div class="stat-label">С ПРОКТОРИНГОМ <span class="stat-glyph">⌁</span></div><div class="stat-number">168<span> участников</span></div><p>Все совпали по логину с туром 1</p></article>
+      <article class="stat"><div class="stat-label">ЗАДАЧИ <span class="stat-glyph">⊞</span></div><div class="stat-number">04<span> задачи</span></div><p>A, B, C + одна задача с прокторингом</p></article>
+    </section>
+    <section class="winners" aria-labelledby="winners-title">
+      <div class="section-overline">ЛИДЕРЫ · ОБЩИЙ ЗАЧЁТ</div>
+      <div class="section-head"><h2 id="winners-title">На орбите лидеров <span>✦</span></h2><p>Первые три места по расчётной сумме баллов</p></div>
+      <div id="podium" class="podium-grid"><p class="loading">Подготовка рейтинга…</p></div>
+    </section>
+    <section class="rankings" id="leaderboard" aria-labelledby="rankings-title">
+      <div class="section-overline">ДЕТАЛЬНЫЕ РЕЗУЛЬТАТЫ</div>
+      <div class="section-head leaderboard-head"><div><h2 id="rankings-title">Таблица результатов <span>↗</span></h2><p>Поиск по логину, сравнение туров и раскрытие результатов по каждой задаче</p></div><a href="data/all_759.csv" class="download-all" download="all_759_ai_2026.csv">↓ Все 759 · CSV</a></div>
+      <div class="toolbar">
+        <div class="tabs" role="tablist" aria-label="Выбор рейтинга"><button role="tab" aria-selected="true" data-mode="total" class="tab active">Общий топ-300</button><button role="tab" aria-selected="false" data-mode="r1" class="tab">Тур 01</button><button role="tab" aria-selected="false" data-mode="r2" class="tab">Тур 02</button></div>
+        <label class="search-field"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="Найти участника по логину" autocomplete="off" aria-label="Поиск по логину"><span class="search-key">/</span></label>
+      </div>
+      <div class="toolbar-sub"><div id="table-summary">Загрузка данных…</div><label class="checkline" id="top-checkbox-wrap"><input id="top-only" type="checkbox" checked><span>Только топ-300</span></label></div>
+      <div class="table-shell"><div class="table-scroll"><table aria-label="Общий рейтинг участников"><thead><tr><th scope="col" class="col-rank">Место</th><th scope="col" class="col-user">Участник</th><th scope="col" class="col-num">Тур 01 <small>/900</small></th><th scope="col" class="col-num">Тур 02 <small>/600</small></th><th scope="col" class="col-result">Сумма <small>/1500</small></th><th scope="col" class="col-more">Подробно</th></tr></thead><tbody id="leaderboard-body"><tr><td colspan="6" class="loading">Загружаем результаты…</td></tr></tbody></table></div><div class="table-bottom"><div id="pagination-status">—</div><div class="page-controls"><button id="prev" aria-label="Предыдущая страница">←</button><span id="page-index">1 / 1</span><button id="next" aria-label="Следующая страница">→</button></div></div></div>
+      <div class="explainer" id="methodology"><div class="explainer-asterisk">✳</div><div><h3>Как рассчитаны баллы</h3><p><strong>Тур 1:</strong> баллы задач A, B, C и итог за первый тур взяты прямо из сохранённого рейтинга All Cups. <strong>Тур 2:</strong> оценка = 600 × (169 − место) / 168. Это следует перцентильному правилу для 168 зачтённых результатов. Отсутствие в рейтинге второго тура = 0 баллов.</p><p>Второй тур показывает private-метрику с округлением до трёх знаков. При действительно равных исходных метриках участники получают одинаковый, более высокий балл. Поэтому для затронутых строк показана возможная верхняя граница; точные результаты без полной точности метрики не гарантированы. <strong>Это не официальный итоговый рейтинг</strong>: жюри может изменить результаты после проверок.</p><div class="sources"><a href="https://ai.edu.gov.ru/main" target="_blank" rel="noopener noreferrer">Регламент тура 1 ↗</a><a href="https://ai.edu.gov.ru/main/proctoring" target="_blank" rel="noopener noreferrer">Регламент тура 2 ↗</a><a href="https://cups.online/ru/rounds/1805/leaderboard" target="_blank" rel="noopener noreferrer">Исходный рейтинг тура 1 ↗</a></div></div></div>
+    </section>
+  </main>
+  <footer class="site-footer content"><div><strong>✳ орбита.</strong><span>Независимый аналитический проект · данные по состоянию на 18 октября 2026, 17:48 МСК</span></div><div>Не является ресурсом организаторов олимпиады или All Cups. Содержит только логины и результаты — без личных данных из сохранённых страниц.</div></footer>
+  <div class="modal-backdrop" id="detail-backdrop" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="detail-title"><button class="modal-close" id="close-detail" aria-label="Закрыть">✕</button><div id="detail-content"></div></div></div>
+</body>
+</html>
